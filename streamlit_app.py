@@ -17,7 +17,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # Lets add a select capability so we can choose fruit
 fruits_selected = st.multiselect("Please select your fruits:", list(my_fruit_list.index), ['Avocado', 'Strawberries'])
-fruits_to_show = my_fruit_list.loc['fruits_selected']
+fruits_to_show = my_fruit_list.loc[fruits_selected]
 
 # Display the data on the page
 st.dataframe(fruits_to_show)
