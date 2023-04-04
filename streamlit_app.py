@@ -13,4 +13,9 @@ st.text('🥑🍞 Avocado Toast')
 
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 my_fruit_list = pd.read_csv(r"https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+# Lets add a select capability so we can choose fruit
+st.multiselect("Please select your fruits:", list(my_fruit_list.index))
+
+# Display the data on the page
 st.dataframe(my_fruit_list)
