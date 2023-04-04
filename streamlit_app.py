@@ -16,7 +16,7 @@ my_fruit_list = pd.read_csv(r"https://uni-lab-files.s3.us-west-2.amazonaws.com/d
 my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # Lets add a select capability so we can choose fruit
-st.multiselect("Please select your fruits:", list(my_fruit_list))
+st.multiselect("Please select your fruits:", list(my_fruit_list.index))
 
 # Display the data on the page
 st.dataframe(my_fruit_list)
